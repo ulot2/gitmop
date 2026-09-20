@@ -1,0 +1,24 @@
+{
+  "name": "gitmop",
+  "version": "0.0.0",
+  "description": "Find and delete stale local git branches.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "gitmop": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  }
+}
