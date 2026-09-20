@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <rect width="600" height="300" rx="8" fill="#1e1e2e"/>
+  <circle cx="20" cy="18" r="6" fill="#f38ba8"/><circle cx="40" cy="18" r="6" fill="#f9e2af"/><circle cx="60" cy="18" r="6" fill="#a6e3a1"/>
+  <g fill="#cdd6f4" xml:space="preserve">
+    <text x="20" y="58"><tspan fill="#a6e3a1">$</tspan> gitmop list</text>
+    <text x="20" y="80">feature/login   <tspan fill="#89b4fa">merged</tspan></text>
+    <text x="20" y="102">fix/typo        <tspan fill="#f9e2af">gone</tspan></text>
+    <text x="20" y="146"><tspan fill="#a6e3a1">$</tspan> gitmop clean</text>
+    <text x="20" y="168">Deleted feature/login (merged, was 6dd7ee8)</text>
+    <text x="20" y="190">Deleted fix/typo (gone, was 45cd660)</text>
+    <text x="20" y="234"><tspan fill="#a6e3a1">$</tspan> gitmop old --days 30</text>
+    <text x="20" y="256">experiment/cache   2026-06-12</text>
+  </g>
+</svg>
