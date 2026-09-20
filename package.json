@@ -20,5 +20,9 @@
   "devDependencies": {
     "@types/node": "^26.6.2",
     "typescript": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulot2/gitmop.git"
   }
 }
