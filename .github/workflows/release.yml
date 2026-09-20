@@ -1,0 +1,25 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write # create the GitHub release
+  id-token: write # prove to npm which workflow is publishing
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@latest # trusted publishing needs npm 11.5.1 or newer
+      - run: npm ci
+      - run: npm test
+      - run: npm publish
+      - run: awk -v v="${GITHUB_REF_NAME#v}" '/^## \[/{p=($2=="["v"]")} p' CHANGELOG.md > notes.md
+      - run: gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file notes.md
+        env:
+          GH_TOKEN: ${{ github.token }}
