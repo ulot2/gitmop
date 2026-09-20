@@ -1,6 +1,6 @@
 {
   "name": "gitmop",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Find and delete stale local git branches.",
   "license": "MIT",
   "type": "module",
